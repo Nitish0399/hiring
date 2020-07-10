@@ -28,27 +28,27 @@ app.post('/submitApplication', upload.single('resume'), function(req, res) {
   var position = req.body.position;
   var qualification = req.body.qualification;
   var resume = req.file;
+  var resume_link = req.body.resumeLink;
 
   var data = {
       "name": name,
       "email":email,
       "position":position,
       "qualification":qualification,
-      "resume":resume
+      "resume":resume,
+      "resume_link":resume_link
   }
 
   MongoClient.connect(url, function(err, client) {
       var db = client.db('hiring');
       db.collection('applications').insertOne(data,function(err, collection){
               if (err) throw err;
-              console.log("Record inserted Successfully");
+              console.log("Data inserted Successfully");
           });
 
   });
   res.send('Succefully Applied');
 });
-
-
 
 app.listen(port, () => {
   console.log("Server listening on port " + port);

@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Hiring</title>
 		<link rel="stylesheet" href="./hiring.css">
 		<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Noto+Sans+SC&family=Roboto+Slab:wght@500&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
@@ -10,21 +12,24 @@
 			<p>Company Name</p>
 		</header>
 		<img src="./recruitment_bg.jpg" alt="recruiting_background">
-
 		<main>
 			<h1><u>Complete Application to Apply</u></h1>
 			<form action="/submitApplication" method="post" enctype="multipart/form-data">
 				<div class="form_input">
-					<label for="fullname">Full Name</label><br>
-				  <input type="text" id="fullname" name="fullName">
+					<label for="fullname">Full Name *</label><br>
+				  <input type="text" id="fullname" name="fullName" required>
 				</div>
 				<div class="form_input">
-					<label for="email">Email Id</label><br>
-				  <input type="email" id="email" name="emailId">
+					<label for="email">Email Id *</label><br>
+				  <input type="email" id="email" name="emailId" required>
 				</div>
 				<div class="form_input">
-					<label for="resume">Upload your Resume</label><br>
-					<input type="file" id="resume" name="resume">
+					<label for="resume">Upload your Resume (Only PDF format) *</label><br>
+					<input type="file" id="resume" name="resume" accept=".pdf" required>
+				</div>
+				<div class="form_input">
+					<label for="link">or Provide Link to Resume</label><br>
+					<input type="text" id="link" name="resumeLink" required>
 				</div>
 				<div class="form_input">
 					<label for="position">Position Applying To</label><br>
