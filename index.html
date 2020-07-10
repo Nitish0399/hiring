@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hiring</title>
+		<link rel="stylesheet" href="./hiring.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Noto+Sans+SC&family=Roboto+Slab:wght@500&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<p>Company Name</p>
+		</header>
+		<img src="./recruitment_bg.jpg" alt="recruiting_background">
+
+		<main>
+			<h1><u>Complete Application to Apply</u></h1>
+			<form action="/submitApplication" method="post" enctype="multipart/form-data">
+				<div class="form_input">
+					<label for="fullname">Full Name</label><br>
+				  <input type="text" id="fullname" name="fullName">
+				</div>
+				<div class="form_input">
+					<label for="email">Email Id</label><br>
+				  <input type="email" id="email" name="emailId">
+				</div>
+				<div class="form_input">
+					<label for="resume">Upload your Resume</label><br>
+					<input type="file" id="resume" name="resume">
+				</div>
+				<div class="form_input">
+					<label for="position">Position Applying To</label><br>
+					<select name="position" id="position">
+					  <option value="intern">Intern</option>
+						<option value="software_engineer">Software Engineer</option>
+						<option value="project_manager">Project Manager</option>
+					  <option value="vice_president">Vice President</option>
+					</select>
+				</div>
+				<div class="form_input">
+					<label for="qualification">Your Highest Qualification</label><br>
+					<select name="qualification" id="qualification">
+						<option value="higher_secondary">Higher Secondary</option>
+						<option value="undergraduate">Undergraduate</option>
+						<option value="diploma">Diploma</option>
+					  <option value="postgraduate">Postgradute</option>
+					</select>
+				</div>
+				<input type="submit" class="apply_button" name="submit" value="Apply">
+			</form>
+		</main>
+
+	 <footer>
+			<p>Developed by G. Nitish</p>
+   </footer>
+	</body>
+</html>
