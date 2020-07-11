@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var port = 3000;
 var multer  = require('multer')
+
+//Store resume files in the "uploads" folder
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads')
@@ -18,6 +20,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+//Post method
 app.post('/submitApplication', upload.single('resume'), function(req, res) {
 
   var MongoClient = require('mongodb').MongoClient;
@@ -39,6 +42,7 @@ app.post('/submitApplication', upload.single('resume'), function(req, res) {
       "resume_link":resume_link
   }
 
+  //Connect to MongoDB and insert data
   MongoClient.connect(url, function(err, client) {
       var db = client.db('hiring');
       db.collection('applications').insertOne(data,function(err, collection){

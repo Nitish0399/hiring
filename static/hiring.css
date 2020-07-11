@@ -122,6 +122,9 @@ footer{
 
 }
 @media screen and (max-width: 400px) {
+  img{
+    height:200px;
+  }
   h1{
     font-size: 17px;
   }
