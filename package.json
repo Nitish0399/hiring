@@ -13,7 +13,7 @@
   "author": "nitish",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongodb": "^3.5.9",
     "multer": "^1.4.2"
   }
